@@ -19,8 +19,10 @@ return new class extends Migration {
             $table->string('kabupaten', 100);
             $table->string('kecamatan', 100);
             $table->string('desa', 100);
+            $table->text('alamat');
             $table->string('maps', 255);
-            $table->text('description');
+            $table->text('description')->nullable();
+            $table->integer('id_users_add')->nullable();
             $table->timestamps();
         });
     }
