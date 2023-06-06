@@ -7,6 +7,7 @@ use App\Http\Controllers\Hotspot\HotspotController;
 use App\Http\Controllers\ODP\ODPController;
 use App\Http\Controllers\PPPoE\PPPoEController;
 use App\Http\Controllers\Report\MrkReportController;
+use App\Http\Controllers\Settings\APIController;
 use App\Http\Controllers\Tiang\TiangController;
 use Illuminate\Support\Facades\Route;
 
@@ -90,3 +91,9 @@ Route::get('tiang-location/edit/{id}', [TiangController::class, 'edit'])->name('
 Route::post('tiang-location/update', [TiangController::class, 'update'])->name('update.tiang');
 Route::get('tiang-location/delete/{id}', [TiangController::class, 'delete'])->name('delete.tiang');
 //Tiang
+
+
+//API INSERT
+Route::get('setting/whatsaap-konfigurasi', [APIController::class, 'waconf'])->name('waconf.index');
+Route::post('setting/whatsaap-konfigurasi/set', [APIController::class, 'set'])->name('apiwa.set');
+//API INSERT

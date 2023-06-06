@@ -35,37 +35,37 @@
 
 
     <li class="nav-item">
-        <a class="nav-link {{ (request()->is('pppoe/secret', 'pppoe/secret/*', 'hotspot/users', 'hotspot/users/*', 'report-traffic', 'report-traffic/*')) ? '' : 'collapsed' }}" data-bs-target="#settings-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link {{ (request()->is('setting/whatsaap-konfigurasi*')) ? '' : 'collapsed' }}" data-bs-target="#settings-nav" data-bs-toggle="collapse" href="#">
             <i class="bi bi-gear"></i><span>Settings</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
 
-        <ul id="settings-nav" class="nav-content collapse {{ (request()->is('pppoe/secret', 'pppoe/secret/*', 'hotspot/users', 'hotspot/users/*', 'report-traffic', 'report-traffic/*')) ? 'show' : '' }}" data-bs-parent="#sidebar-nav">
+        <ul id="settings-nav" class="nav-content collapse {{ (request()->is('setting/whatsaap-konfigurasi*')) ? 'show' : '' }}" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="{{ route('pppoe.secret') }}" class="{{ (request()->is('pppoe/secret', 'pppoe/secret/*')) ? 'active' : '' }}">
+            <a href="#" class="{{-- (request()->is('')) ? 'active' : '' --}}">
               <i class="bi bi-circle"></i><span>Pengaturan Umum</span>
             </a>
           </li>
 
           <li>
-            <a href="{{ route('hotspot.users') }}" class="{{ (request()->is('hotspot/users', 'hotspot/users/*')) ? 'active' : '' }}">
+            <a href="#" class="{{-- (request()->is('')) ? 'active' : '' --}}">
               <i class="bi bi-circle"></i><span>Logo Invoice</span>
             </a>
           </li>
 
           <li>
-            <a href="{{ route('traffic.index') }}" class="{{ (request()->is('report-traffic', 'report-traffic/*')) ? 'active' : '' }}">
+            <a href="{{ route('waconf.index') }}" class="{{ (request()->is('setting/whatsaap-konfigurasi', 'setting/whatsaap-konfigurasi/*')) ? 'active' : '' }}">
               <i class="bi bi-circle"></i><span>Whatsapp API</span>
             </a>
           </li>
 
           <li>
-            <a href="{{ route('traffic.index') }}" class="{{ (request()->is('report-traffic', 'report-traffic/*')) ? 'active' : '' }}">
+            <a href="#" class="{{-- (request()->is('')) ? 'active' : '' --}}">
               <i class="bi bi-circle"></i><span>Google Maps API</span>
             </a>
           </li>
 
           <li>
-            <a href="{{ route('traffic.index') }}" class="{{ (request()->is('report-traffic', 'report-traffic/*')) ? 'active' : '' }}">
+            <a href="#" class="{{-- (request()->is('')) ? 'active' : '' --}}">
               <i class="bi bi-circle"></i><span>DOKU API</span>
             </a>
           </li>
