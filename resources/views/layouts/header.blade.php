@@ -25,6 +25,7 @@
 <link href="{{ URL::to('assets/vendor/simple-datatables/style.css') }}" rel="stylesheet">
 <link href="{{ URL::to('assets/css/admin/style.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<x-embed-styles />
 
 <style>
     .preloader {

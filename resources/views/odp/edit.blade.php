@@ -169,6 +169,10 @@
                         </div>
                     </div>
 
+                    <div class="col-lg-12">
+                        <x-embed url="{{ $edit->maps }}" aspect-ratio="4:3" />
+                    </div>
+
 
                     <div class="col-md-12 mb-0 pr-0">
                         <div class="form-group form-group-default">
@@ -206,4 +210,5 @@
     </div>
 
 </div>
+
 @endsection

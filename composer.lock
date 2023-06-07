@@ -4,8 +4,80 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58f8abbf2532769738e24919c64044a0",
+    "content-hash": "effa92930aeaa94bbb091887a7ebcbff",
     "packages": [
+        {
+            "name": "bensampo/laravel-embed",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenSampo/laravel-embed.git",
+                "reference": "8f2255a17b9ad67d76cde853d1a86c6359c1d8d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenSampo/laravel-embed/zipball/8f2255a17b9ad67d76cde853d1a86c6359c1d8d3",
+                "reference": "8f2255a17b9ad67d76cde853d1a86c6359c1d8d3",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.3.1|^7.0",
+                "illuminate/contracts": "^8.83.27|^9.0|^10.0",
+                "illuminate/support": "^8.83.27|^9.0|^10.0",
+                "php": "^7.4.0|^8.0"
+            },
+            "require-dev": {
+                "laravel/framework": "^8.83.27|^9.0|^10.0",
+                "orchestra/testbench": "^5.0|^6.0",
+                "phpunit/phpunit": "^8.5.23|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "BenSampo\\Embed\\EmbedServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenSampo\\Embed\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Sampson",
+                    "homepage": "https://sampo.co.uk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Painless responsive embeds for videos, slideshows and more.",
+            "homepage": "https://github.com/bensampo/laravel-embed",
+            "keywords": [
+                "bensampo",
+                "embed",
+                "laravel",
+                "package"
+            ],
+            "support": {
+                "issues": "https://github.com/BenSampo/laravel-embed/issues",
+                "source": "https://github.com/BenSampo/laravel-embed/tree/v2.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/bensampo",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-05-12T16:39:25+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.11.0",
@@ -303,6 +375,42 @@
                 }
             ],
             "time": "2022-12-15T16:57:16+00:00"
+        },
+        {
+            "name": "doku/jokul-php-library",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PTNUSASATUINTIARTHA-DOKU/jokul-php-library.git",
+                "reference": "fafccb5eb1e91f1149bc1fc5d29864ce6cb6b44f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PTNUSASATUINTIARTHA-DOKU/jokul-php-library/zipball/fafccb5eb1e91f1149bc1fc5d29864ce6cb6b44f",
+                "reference": "fafccb5eb1e91f1149bc1fc5d29864ce6cb6b44f",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DOKU\\": "src/DOKU/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Devex Dev",
+                    "email": "devexdev@gmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/PTNUSASATUINTIARTHA-DOKU/jokul-php-library/issues",
+                "source": "https://github.com/PTNUSASATUINTIARTHA-DOKU/jokul-php-library/tree/2.0.0"
+            },
+            "time": "2020-11-13T04:01:20+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",

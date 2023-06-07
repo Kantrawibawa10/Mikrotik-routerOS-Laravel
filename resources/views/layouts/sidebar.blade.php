@@ -35,20 +35,20 @@
 
 
     <li class="nav-item">
-        <a class="nav-link {{ (request()->is('setting/whatsaap-konfigurasi*')) ? '' : 'collapsed' }}" data-bs-target="#settings-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link {{ (request()->is('setting/whatsaap-konfigurasi*', 'setting/doku-konfigurasi*', 'setting/umum-konfigurasi*', 'setting/gmaps-konfigurasi', 'setting/tempinv-konfigurasi')) ? '' : 'collapsed' }}" data-bs-target="#settings-nav" data-bs-toggle="collapse" href="#">
             <i class="bi bi-gear"></i><span>Settings</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
 
-        <ul id="settings-nav" class="nav-content collapse {{ (request()->is('setting/whatsaap-konfigurasi*')) ? 'show' : '' }}" data-bs-parent="#sidebar-nav">
+        <ul id="settings-nav" class="nav-content collapse {{ (request()->is('setting/gmaps-konfigurasi', 'setting/whatsaap-konfigurasi*', 'setting/doku-konfigurasi*', 'setting/umum-konfigurasi*', 'setting/gmaps-konfigurasi', 'setting/tempinv-konfigurasi')) ? 'show' : '' }}" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="#" class="{{-- (request()->is('')) ? 'active' : '' --}}">
+            <a href="{{ route('umumconf.index') }}" class="{{ (request()->is('setting/umum-konfigurasi*')) ? 'active' : '' }}">
               <i class="bi bi-circle"></i><span>Pengaturan Umum</span>
             </a>
           </li>
 
           <li>
-            <a href="#" class="{{-- (request()->is('')) ? 'active' : '' --}}">
-              <i class="bi bi-circle"></i><span>Logo Invoice</span>
+            <a href="{{ route('tempinv.index') }}" class="{{ (request()->is('setting/tempinv-konfigurasi')) ? 'active' : '' }}">
+              <i class="bi bi-circle"></i><span>Template Invoice</span>
             </a>
           </li>
 
@@ -59,13 +59,13 @@
           </li>
 
           <li>
-            <a href="#" class="{{-- (request()->is('')) ? 'active' : '' --}}">
+            <a href="{{ route('gmaps.index') }}" class="{{ (request()->is('setting/gmaps-konfigurasi')) ? 'active' : '' }}">
               <i class="bi bi-circle"></i><span>Google Maps API</span>
             </a>
           </li>
 
           <li>
-            <a href="#" class="{{-- (request()->is('')) ? 'active' : '' --}}">
+            <a href="{{ route('dokuconf.index') }}" class="{{ (request()->is('setting/doku-konfigurasi', 'setting/doku-konfigurasi/*')) ? 'active' : '' }}">
               <i class="bi bi-circle"></i><span>DOKU API</span>
             </a>
           </li>

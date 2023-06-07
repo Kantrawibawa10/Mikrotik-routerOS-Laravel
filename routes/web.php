@@ -8,6 +8,7 @@ use App\Http\Controllers\ODP\ODPController;
 use App\Http\Controllers\PPPoE\PPPoEController;
 use App\Http\Controllers\Report\MrkReportController;
 use App\Http\Controllers\Settings\APIController;
+use App\Http\Controllers\Settings\UmumController;
 use App\Http\Controllers\Tiang\TiangController;
 use Illuminate\Support\Facades\Route;
 
@@ -93,7 +94,20 @@ Route::get('tiang-location/delete/{id}', [TiangController::class, 'delete'])->na
 //Tiang
 
 
-//API INSERT
+//API Konfigurasi
+Route::get('setting/umum-konfigurasi', [UmumController::class, 'confapp'])->name('umumconf.index');
+Route::post('setting/umum-konfigurasi/set', [UmumController::class, 'setumum'])->name('umum.set');
+
+Route::get('setting/tempinv-konfigurasi', [UmumController::class, 'tempinv'])->name('tempinv.index');
+Route::post('setting/tempinv-konfigurasi/set', [UmumController::class, 'setinv'])->name('invoice.set');
+
 Route::get('setting/whatsaap-konfigurasi', [APIController::class, 'waconf'])->name('waconf.index');
 Route::post('setting/whatsaap-konfigurasi/set', [APIController::class, 'set'])->name('apiwa.set');
-//API INSERT
+
+Route::get('setting/doku-konfigurasi', [APIController::class, 'doku'])->name('dokuconf.index');
+Route::post('setting/doku-konfigurasi/set', [APIController::class, 'setdoku'])->name('apidoku.set');
+
+Route::get('setting/gmaps-konfigurasi', [APIController::class, 'gmaps'])->name('gmaps.index');
+//API Konfigurasi
+
+

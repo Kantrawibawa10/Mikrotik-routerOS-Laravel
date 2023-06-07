@@ -11,7 +11,6 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">@yield('subtitle')</li>
                     <li class="breadcrumb-item active"><a href="#">Edit @yield('title')</a></li>
-                    <li class="breadcrumb-item active">{{-- $edit['name'] --}}</li>
                 </ol>
             </nav>
         </div>
@@ -53,7 +52,7 @@
                     <div class="col-sm-12 mb-0">
                         <div class="form-group form-group-default">
                             <label><span class="text-primary">!</span>API Whatsapp (WABLAS)</label>
-                            <input name="api" type="text" id="api"
+                            <input name="api" type="password" id="api"
                                 class="form-control mb-0 @error ('api') is-invalid @enderror" placeholder="API Whatsapp"
                                 value="{{ $api['api'] ?? '' }}">
 
@@ -76,36 +75,42 @@
                             <label for="">Notifikasi 1</label>
                             <select name="value[]" id="notif1" class="form-control">
                                 <option value="" selected disabled>Pilih Waktu</option>
-                                @if($notif1['value'] == 2)
+                                @if($notif1['value'] ?? '' == '2')
                                     <option value="2" selected>2 Hari Sebelum Jatuh Tempo</option>
                                     <option value="5">5 Hari Sebelum Jatuh Tempo</option>
                                     <option value="7">7 Hari Sebelum Jatuh Tempo</option>
                                     <option value="14">14 Hari Sebelum Jatuh Tempo</option>
                                     <option value="0">Hanya Pada Saat Jatuh Tempo</option>
-                                @elseif($notif1['value'] == 5)
+                                @elseif($notif1['value'] ?? '' == '5')
                                     <option value="5" selected>5 Hari Sebelum Jatuh Tempo</option>
                                     <option value="2">2 Hari Sebelum Jatuh Tempo</option>
                                     <option value="7">7 Hari Sebelum Jatuh Tempo</option>
                                     <option value="14">14 Hari Sebelum Jatuh Tempo</option>
                                     <option value="0">Hanya Pada Saat Jatuh Tempo</option>
-                                @elseif($notif1['value'] == 7)
+                                @elseif($notif1['value'] ?? '' == '7')
                                     <option value="7" selected>7 Hari Sebelum Jatuh Tempo</option>
                                     <option value="2">2 Hari Sebelum Jatuh Tempo</option>
                                     <option value="5">5 Hari Sebelum Jatuh Tempo</option>
                                     <option value="14">14 Hari Sebelum Jatuh Tempo</option>
                                     <option value="0">Hanya Pada Saat Jatuh Tempo</option>
-                                @elseif($notif1['value'] == 14)
+                                @elseif($notif1['value']  ?? '' == '14')
                                     <option value="14" selected>14 Hari Sebelum Jatuh Tempo</option>
                                     <option value="2">2 Hari Sebelum Jatuh Tempo</option>
                                     <option value="5">5 Hari Sebelum Jatuh Tempo</option>
                                     <option value="7">7 Hari Sebelum Jatuh Tempo</option>
                                     <option value="0">Hanya Pada Saat Jatuh Tempo</option>
-                                @elseif($notif1['value'] == 0)
+                                @elseif($notif1['value'] ?? '' == '0')
                                     <option value="0" selected>Hanya Pada Saat Jatuh Tempo</option>
                                     <option value="2">2 Hari Sebelum Jatuh Tempo</option>
                                     <option value="5">5 Hari Sebelum Jatuh Tempo</option>
                                     <option value="7">7 Hari Sebelum Jatuh Tempo</option>
                                     <option value="14">14 Hari Sebelum Jatuh Tempo</option>
+                                @else
+                                    <option value="2">2 Hari Sebelum Jatuh Tempo</option>
+                                    <option value="5">5 Hari Sebelum Jatuh Tempo</option>
+                                    <option value="7">7 Hari Sebelum Jatuh Tempo</option>
+                                    <option value="14">14 Hari Sebelum Jatuh Tempo</option>
+                                    <option value="0">Hanya Pada Saat Jatuh Tempo</option>
                                 @endif
 
                             </select>
@@ -159,23 +164,6 @@
                                 value="{{ $domain['value'] ?? '' }}">
 
                             @error('domain')
-                            <span class="invalid-feedback" role="alert" style="font-size: 11px;">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-sm-12 mb-0">
-                        <div class="form-group form-group-default">
-                            <label><span class="text-primary">!</span>Token API (WABLAS)</label>
-                            <input type="hidden" name="setting[]" value="WA_API">
-                            <input type="hidden" name="name_config[]" value="TokenAPI_WA">
-                            <input name="value[]" type="password" id="token"
-                                class="form-control mb-0 @error ('token') is-invalid @enderror" placeholder="Token"
-                                value="{{ $token['value'] ?? '' }}">
-
-                            @error('token')
                             <span class="invalid-feedback" role="alert" style="font-size: 11px;">
                                 <strong>{{ $message }}</strong>
                             </span>
