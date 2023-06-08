@@ -9,6 +9,7 @@ use App\Http\Controllers\PPPoE\PPPoEController;
 use App\Http\Controllers\Report\MrkReportController;
 use App\Http\Controllers\Settings\APIController;
 use App\Http\Controllers\Settings\UmumController;
+use App\Http\Controllers\Settings\UsersController;
 use App\Http\Controllers\Tiang\TiangController;
 use Illuminate\Support\Facades\Route;
 
@@ -109,5 +110,11 @@ Route::post('setting/doku-konfigurasi/set', [APIController::class, 'setdoku'])->
 
 Route::get('setting/gmaps-konfigurasi', [APIController::class, 'gmaps'])->name('gmaps.index');
 //API Konfigurasi
+
+
+//User Management
+Route::get('setting/users-konfigurasi', [UsersController::class, 'index'])->name('users.index');
+Route::post('setting/users-konfigurasi/set', [UsersController::class, 'setumum'])->name('umum.set');
+//User Management
 
 
