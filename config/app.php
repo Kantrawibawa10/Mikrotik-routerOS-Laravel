@@ -196,6 +196,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
     ],
 
     /*

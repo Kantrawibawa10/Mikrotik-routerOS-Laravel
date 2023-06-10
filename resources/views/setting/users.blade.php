@@ -48,7 +48,6 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Kode Users</th>
                         <th scope="col">Nama Users</th>
                         <th scope="col">Role</th>
                         <th scope="col">Description</th>
@@ -58,8 +57,8 @@
                 <tbody>
                     @foreach($user as $no => $data)
                     <tr>
+                        <div hidden>{{ $id = str_replace('*', '', $data['id']) }}</div>
                         <th scope="row">{{ $no+1 }}</th>
-                        <td>{{ $data['id'] ?? 'Data kosong' }}</td>
                         <td>{{ $data['name'] ?? 'Data kosong' }}</td>
                         <td class="">{{ $data['email'] ?? 'Data kosong' }}</td>
                         <td>{{ $data['description'] ?? 'Data kosong' }}</td>

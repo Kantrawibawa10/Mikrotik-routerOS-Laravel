@@ -11,6 +11,11 @@ use function Symfony\Component\String\b;
 
 class MrkReportController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth']);
+    }
+
     public function index(Request $request)
     {
         $hari_ini = date("Y-m-d");

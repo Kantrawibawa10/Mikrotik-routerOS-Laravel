@@ -9,6 +9,11 @@ use App\Models\Tiang;
 
 class TiangController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth']);
+    }
+
     public function index()
     {
         try {

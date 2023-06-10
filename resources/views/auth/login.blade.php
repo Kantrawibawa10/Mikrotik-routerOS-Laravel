@@ -38,8 +38,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="user" class="sr-only">User</label>
-                                    <input type="text" name="user" id="user" class="mb-0 form-control  @error ('user') is-invalid @enderror" value="{{ old('user') }}" placeholder="User Router">
-                                    @error('user')
+                                    <input type="text" name="email" id="user" class="mb-0 form-control  @error ('email') is-invalid @enderror" value="{{ old('user') }}" placeholder="User Router">
+                                    @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -47,7 +47,7 @@
                                 </div>
                                 <div class="form-group mb-4">
                                     <label for="password" class="sr-only">Password</label>
-                                    <input type="password" name="pass" id="pass" class="form-control" placeholder="***********">
+                                    <input type="password" name="password" id="pass" class="form-control" placeholder="***********">
                                 </div>
                                 <button class="btn btn-block login-btn mb-4" type="submit">Login</button>
                             </form>

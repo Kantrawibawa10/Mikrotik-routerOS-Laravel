@@ -10,6 +10,11 @@ use App\Models\Umum;
 
 class UmumController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth']);
+    }
+
     public function confapp()
     {
         try {

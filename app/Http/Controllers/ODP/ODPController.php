@@ -9,6 +9,11 @@ use App\Models\ODP;
 
 class ODPController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth']);
+    }
+
     public function index()
     {
         try {

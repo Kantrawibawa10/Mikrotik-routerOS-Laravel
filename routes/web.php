@@ -10,6 +10,7 @@ use App\Http\Controllers\Report\MrkReportController;
 use App\Http\Controllers\Settings\APIController;
 use App\Http\Controllers\Settings\UmumController;
 use App\Http\Controllers\Settings\UsersController;
+use App\Http\Controllers\Settings\RoleController;
 use App\Http\Controllers\Tiang\TiangController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +34,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store'])->name('login.access');
 Route::get('/logout', [LogoutController::class, 'logout'])->name('logout.access');
+
+
+// Route::controller(RoleController::class)->group(function(){
+//     Route::get('roles', 'index');
+// });
+
+
+
 
 // DASHBOARD
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
