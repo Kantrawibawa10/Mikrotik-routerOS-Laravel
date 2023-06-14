@@ -152,3 +152,25 @@
 
         </div>
     </div><!-- End Recent Activity -->
+
+    // public function store(Request $request)
+    // {
+    //     $request->validate([
+    //         'ip' => 'required',
+    //         'user' => 'required',
+    //     ]);
+
+    //     $ip = $request->post('ip');
+    //     $user = $request->post('user');
+    //     $pass = $request->post('pass');
+
+    //     $data = [
+    //         'ip' => $ip,
+    //         'user' => $user,
+    //         'pass' => $pass,
+    //     ];
+
+    //     $request->session()->put($data);
+    //     toast('Anda berhasil login','success');
+    //     return redirect()->route('dashboard');
+    // }

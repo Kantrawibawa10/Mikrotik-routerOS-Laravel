@@ -13,7 +13,7 @@ class LogoutController extends Controller
         $request->session()->forget('ip');
         $request->session()->forget('user');
         $request->session()->forget('password');
-
+        auth()->logout();
         Alert::success('Success', 'Anda berhasil logout');
         return redirect()->route('login');
     }

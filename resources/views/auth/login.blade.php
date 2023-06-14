@@ -28,15 +28,6 @@
                             <form action="{{ route('login.access') }}" method="POST">
                                 @csrf
                                 <div class="form-group">
-                                    <label for="ip" class="sr-only">Ip Address</label>
-                                    <input type="text" name="ip" id="ip" class="mb-0 form-control @error ('ip') is-invalid @enderror" value="{{ old('ip') }}" placeholder="IP address">
-                                    @error('ip')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
                                     <label for="user" class="sr-only">User</label>
                                     <input type="text" name="email" id="user" class="mb-0 form-control  @error ('email') is-invalid @enderror" value="{{ old('user') }}" placeholder="User Router">
                                     @error('email')
@@ -47,7 +38,12 @@
                                 </div>
                                 <div class="form-group mb-4">
                                     <label for="password" class="sr-only">Password</label>
-                                    <input type="password" name="password" id="pass" class="form-control" placeholder="***********">
+                                    <input type="password" name="password" id="pass" class="form-control @error ('password') is-invalid @enderror" placeholder="***********">
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <button class="btn btn-block login-btn mb-4" type="submit">Login</button>
                             </form>

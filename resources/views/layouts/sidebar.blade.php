@@ -98,4 +98,36 @@
           </li>
         </ul>
     </li>
+
+    <li class="nav-item">
+        <a class="nav-link {{ (request()->is('ODP-location', 'ODP-location/*', 'tiang-location', 'tiang-location/*')) ? '' : 'collapsed' }}" data-bs-target="#paket-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-router-fill"></i><span>Paket Langganan</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+
+        <ul id="paket-nav" class="nav-content collapse {{ (request()->is('ODP-location', 'ODP-location/*', 'tiang-location', 'tiang-location/*')) ? 'show' : '' }}" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{{ route('ODP.index') }}" class="{{ (request()->is('ODP-location', 'ODP-location/*')) ? 'active' : '' }}">
+              <i class="bi bi-circle"></i><span>Group</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ route('tiang.index') }}" class="{{ (request()->is('tiang-location', 'tiang-location/*')) ? 'active' : '' }}">
+              <i class="bi bi-circle"></i><span>Bandwidht</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ route('tiang.index') }}" class="{{ (request()->is('tiang-location', 'tiang-location/*')) ? 'active' : '' }}">
+              <i class="bi bi-circle"></i><span>Addons</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ route('tiang.index') }}" class="{{ (request()->is('tiang-location', 'tiang-location/*')) ? 'active' : '' }}">
+              <i class="bi bi-circle"></i><span>Paket</span>
+            </a>
+          </li>
+        </ul>
+    </li>
 </ul>

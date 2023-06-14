@@ -12,35 +12,13 @@ class LoginController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['guest']);
+        $this->middleware(['guest'])->except('logout');
     }
 
     public function index()
     {
         return view('auth.login');
     }
-
-    // public function store(Request $request)
-    // {
-    //     $request->validate([
-    //         'ip' => 'required',
-    //         'user' => 'required',
-    //     ]);
-
-    //     $ip = $request->post('ip');
-    //     $user = $request->post('user');
-    //     $pass = $request->post('pass');
-
-    //     $data = [
-    //         'ip' => $ip,
-    //         'user' => $user,
-    //         'pass' => $pass,
-    //     ];
-
-    //     $request->session()->put($data);
-    //     toast('Anda berhasil login','success');
-    //     return redirect()->route('dashboard');
-    // }
 
     public function store(Request $request)
     {
